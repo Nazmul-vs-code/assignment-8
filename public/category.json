@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Deshi Qurbani Cow",
+    "slug": "deshi-qurbani-cow"
+  },
+  {
+    "id": 2,
+    "name": "Premium Black Goat",
+    "slug": "premium-black-goat"
+  },
+  {
+    "id": 3,
+    "name": "White Dumba Sheep",
+    "slug": "white-dumba-sheep"
+  },
+  {
+    "id": 4,
+    "name": "Arabian Camel",
+    "slug": "arabian-camel"
+  },
+  {
+    "id": 5,
+    "name": "Farm Brown Cow",
+    "slug": "farm-brown-cow"
+  },
+  {
+    "id": 6,
+    "name": "Healthy White Goat",
+    "slug": "healthy-white-goat"
+  },
+  {
+    "id": 7,
+    "name": "Deshi Buffalo",
+    "slug": "deshi-buffalo"
+  },
+  {
+    "id": 8,
+    "name": "Mini Brown Goat",
+    "slug": "mini-brown-goat"
+  },
+  {
+    "id": 9,
+    "name": "Royal Qurbani Cow",
+    "slug": "royal-qurbani-cow"
+  },
+  {
+    "id": 10,
+    "name": "Desert White Camel",
+    "slug": "desert-white-camel"
+  }
+]

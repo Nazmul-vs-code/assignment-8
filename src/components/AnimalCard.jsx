@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AnimalCard = ({ animal }) => {
     const {
+        id,
         name,
         type,
         breed,
@@ -62,8 +64,10 @@ const AnimalCard = ({ animal }) => {
                             ৳{price.toLocaleString()}
                         </span>
                     </div>
-                    <button className="btn ">
-                        Details
+                    <button 
+
+                    className="btn ">
+                        <Link href={`/all-animals/${id}`}>Details</Link>
                     </button>
                 </div>
             </div>

@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IoLocationOutline, IoArrowBack } from "react-icons/io5";
 import { GiWeight } from "react-icons/gi";
+import { toast } from 'react-toastify';
+import { showToast } from '@/importantFunctions/toast';
+import ContactBtn from '@/components/ContactBtn';
 
 const AnimalDetailPage = async ({ params }) => {
     const { id } = await params;
@@ -85,9 +88,8 @@ const AnimalDetailPage = async ({ params }) => {
                             <p className="text-sm text-orange-400 uppercase font-bold">Asking Price</p>
                             <p className="text-4xl font-black text-orange-600">৳{price.toLocaleString()}</p>
                         </div>
-                        <button className="btn btn-lg bg-black text-white hover:bg-gray-800 px-10 rounded-2xl">
-                            Contact Seller
-                        </button>
+                        
+                        <ContactBtn animalName={name} />
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="border w-[80%] mx-auto border-red-500 mb-20">
+      <div className="w-[80%] mx-auto  mb-20">
         < FeturedAnimal></FeturedAnimal>
 
       </div>

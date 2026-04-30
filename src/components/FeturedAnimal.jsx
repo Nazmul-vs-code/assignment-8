@@ -11,12 +11,15 @@ const FeturedAnimal = async () => {
     // console.log(animals , " Yooo animals")
     // console.log(TopDemo , " TopDemo animals")
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-            {
-                TopDemo.map(a => <AnimalCard animal={a} key={a.id} />)
+        <div className='flex flex-col gap-2'>
+            <h2 className='text-2xl font-semibold'>Our Top Seller Animals</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+                {
+                    TopDemo.map(a => <AnimalCard animal={a} key={a.id} />)
 
-            }
+                }
 
+            </div>
         </div>
     );
 };

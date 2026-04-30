@@ -31,7 +31,7 @@ const RegisterForm = () => {
             // callbackURL: "https://example.com/callback",
         });
 
-        console.log({ res, error }, " response from the server ")
+        // console.log({ res, error }, " response from the server ")
         if (error) {
             toast("Unexpected error occured with : " + error.message)
         }

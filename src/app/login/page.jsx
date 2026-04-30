@@ -30,7 +30,7 @@ const RegisterForm = () => {
 
 
     };
-    
+
     const handleGoogleLogin = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
@@ -78,7 +78,7 @@ const RegisterForm = () => {
 
                     {/* Create Account Button (Submit) */}
                     <button type="submit" className="btn btn-neutral mt-6 w-full">
-                        Create Account
+                        Log in
                     </button>
 
                     <div className="">

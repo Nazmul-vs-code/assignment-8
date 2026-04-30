@@ -35,6 +35,8 @@ const Navbar = () => {
           <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow gap-2">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/all-animals">All Animals</Link></li>
+            <li><Link href="/profile">My profile</Link></li>
+
             {!user && (
               <>
                 <div className="divider my-0"></div>
@@ -59,6 +61,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 font-medium">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/all-animals">All Animals</Link></li>
+          <li><Link href="/profile">My profile</Link></li>
         </ul>
       </div>
 

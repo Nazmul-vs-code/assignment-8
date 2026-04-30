@@ -22,12 +22,19 @@ const RegisterForm = () => {
             callbackURL: "/",
         });
 
-        console.log({ res, error }, " response from the server ");
+        // console.log({ res, error }, " response from the server ");
 
         if (error) {
             toast("Unexpected error occured with : " + error.message)
         }
 
+
+    };
+    
+    const handleGoogleLogin = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
     };
 
     return (
@@ -76,7 +83,8 @@ const RegisterForm = () => {
 
                     <div className="">
 
-                    <button className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
+                        <button onClick={handleGoogleLogin}
+                            className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
                     </div>
                     <p className="text-xs text-center mt-4 text-gray-500">
                         Click here to <Link href="/register" className="link link-primary">Register</Link>

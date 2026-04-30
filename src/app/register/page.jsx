@@ -5,7 +5,8 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { authClient } from '@/lib/auth-client';
 import { toast } from 'react-toastify';
 import { FaGoogle } from 'react-icons/fa';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 
 const RegisterForm = () => {
 
@@ -40,6 +41,12 @@ const RegisterForm = () => {
         }
 
     };
+
+    const handleGoogleLogin = async () => {
+            const data = await authClient.signIn.social({
+                provider: "google",
+            });
+        };
 
     return (
         <div className='border-2 border-yellow-500 w-9/12 mx-auto p-6 my-20'>
@@ -107,7 +114,8 @@ const RegisterForm = () => {
 
                     <div className="">
 
-                        <button className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
+                        <button onClick={handleGoogleLogin}
+                         className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
                     </div>
                     <p className="text-xs text-center mt-4 text-gray-500">
                         Already have an account? <Link href="/login" className="link link-primary">Login</Link>

@@ -4,8 +4,13 @@ import Link from 'next/link';
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { authClient } from '@/lib/auth-client';
 import { toast } from 'react-toastify';
+import { FaGoogle } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 
 const RegisterForm = () => {
+
+    const router = useRouter();
+
     const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = async (e) => {
@@ -13,8 +18,8 @@ const RegisterForm = () => {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
-        const {name , email , password , profile} = data;
-        console.log("Registering user:", {name , email , password , profile});
+        const { name, email, password, profile } = data;
+        console.log("Registering user:", { name, email, password, profile });
         // You can call your authClient or server action here
 
         const { data: res, error } = await authClient.signUp.email({
@@ -25,9 +30,13 @@ const RegisterForm = () => {
             // callbackURL: "https://example.com/callback",
         });
 
-        console.log({res , error} , " response from the server ")
-        if(error){
+        console.log({ res, error }, " response from the server ")
+        if (error) {
             toast("Unexpected error occured with : " + error.message)
+        }
+
+        if(!error){
+            router.push('/')
         }
 
     };
@@ -96,6 +105,10 @@ const RegisterForm = () => {
                         Create Account
                     </button>
 
+                    <div className="">
+
+                        <button className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
+                    </div>
                     <p className="text-xs text-center mt-4 text-gray-500">
                         Already have an account? <Link href="/login" className="link link-primary">Login</Link>
                     </p>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { authClient } from '@/lib/auth-client';
 import { toast } from 'react-toastify';
+import { FaGoogle } from 'react-icons/fa';
 
 const RegisterForm = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -73,8 +74,12 @@ const RegisterForm = () => {
                         Create Account
                     </button>
 
+                    <div className="">
+
+                    <button className='w-full btn text-green-500 btn-outline'><FaGoogle /> Login with Google </button>
+                    </div>
                     <p className="text-xs text-center mt-4 text-gray-500">
-                        Already have an account? <Link href="/login" className="link link-primary">Login</Link>
+                        Click here to <Link href="/register" className="link link-primary">Register</Link>
                     </p>
                 </fieldset>
             </form>

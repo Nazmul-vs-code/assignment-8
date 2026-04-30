@@ -3,8 +3,11 @@ import { useSession, authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { PiCowFill } from "react-icons/pi";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 const Navbar = () => {
+  const router = useRouter();
   const sessionData = useSession();
   const user = sessionData?.data?.user;
 

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
 
 const RegisterForm = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -25,6 +26,9 @@ const RegisterForm = () => {
         });
 
         console.log({res , error} , " response from the server ")
+        if(error){
+            toast("Unexpected error occured with : " + error.message)
+        }
 
     };
 

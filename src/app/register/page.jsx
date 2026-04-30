@@ -35,7 +35,7 @@ const RegisterForm = () => {
             toast("Unexpected error occured with : " + error.message)
         }
 
-        if(!error){
+        if(!error){ 
             router.push('/')
         }
 
